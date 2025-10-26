@@ -1,0 +1,27 @@
+{
+  "name": "gen-ai",
+  "version": "1.0.0",
+  "description": "A comprehensive roadmap to master Generative AI from fundamentals to advanced implementations.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshiltomar/gen-ai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshiltomar/gen-ai/issues"
+  },
+  "homepage": "https://github.com/harshiltomar/gen-ai#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "groq-sdk": "^0.34.0",
+    "openai": "^6.7.0",
+    "path": "^0.12.7"
+  }
+}
