@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/harshiltomar/gen-ai#readme",
   "dependencies": {
+    "@tavily/core": "^0.5.12",
     "fs": "0.0.1-security",
     "groq-sdk": "^0.34.0",
     "openai": "^6.7.0",

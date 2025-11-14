@@ -1,6 +1,9 @@
 import Groq from "groq-sdk";
+import { tavily } from "@tavily/core";
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
+
 
 export async function main() {
   const chatCompletion = await getGroqChatCompletion();
@@ -19,7 +22,7 @@ export async function getGroqChatCompletion() {
       },
       {
         role: "user",
-        content: "Review: The food was good, but the service was slow. Overall, it was a good experience and my favorite dishes were the lasagna and the tiramisu."
+        content: "What is the latest iphone and what are it's specs"
       },
     ],
     tools: [
@@ -75,5 +78,7 @@ async function webSearch({query}) {
     console.log("Calling WebSearch Tool...");
     console.log(`Query: ${query}`);
 
-    return "" 
+    const response = await tvly.search(query);  
+    console.log(JSON.stringify(response, null, 2));
+    return response;
 }
